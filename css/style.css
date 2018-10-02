@@ -1,0 +1,36 @@
+body, html {
+    background: url("../images/trainStation.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    overflow: auto;
+}
+
+.jumbotron {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.addTrain, .jumbotron, .trainSchedule {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: rgba(116, 22, 22, 0.9);
+
+}
+
+.addTrain, .trainSchedule {
+    font-size: 120%;
+}
+
+.table {
+    border-top: 0px;
+}
+
+#pointer {
+    cursor: pointer;
+}
