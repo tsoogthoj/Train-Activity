@@ -24,7 +24,7 @@
         <div class="card">
             <div class="card-header addTrain">
                 <a id="pointer" data-toggle="collapse" data-target="#addTrainForm" aria-expanded="false" aria-controls="collapseExample">
-                    <span>Add a Train</span><span> (Click to collapse)</span>
+                    <span>Add a Train</span><span id='toggleCollapse'> (Click to expand)</span>
                 </a>
             </div>
             <div class="card-body collapse" id="addTrainForm">
@@ -42,8 +42,12 @@
                         <input type="text" class="form-control" id="trainTime" placeholder="24:00">
                     </div>
                     <div class="form-group">
-                        <label for="frequency">Frequency</label>
-                        <input type="text" class="form-control" id="frequency" placeholder="How many time does this train run?">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency" placeholder="Minutes until next train">
+                    </div>
+                    <div class="form-group justify-content-end" id='addTrain'>
+                            <button type="button" class="btn btn-light"
+                            id="addTrainBtn" data-toggle="modal" data-target="#modal">Add Train</button>
                     </div>
                 </form>
             </div>
@@ -59,50 +63,42 @@
                     <span>Current Train Schedule</span>
                 </a>
             </div>
-            <div class="card-body" id="">
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">Train Name</th>
-                        <th scope="col">Destination</th>
-                        <th scope="col">Frequency (min)</th>
-                        <th scope="col">Next Arrival</th>
-                        <th scope="col">Minutes Away</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Thomas</td>
-                            <td>New York</td>
-                            <td>60</td>
-                            <td>9</td>
-                            <td>45</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="card-body" id="">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
         </div>
     </div>
 
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalTitle">Thanks for adding a Train</h5>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>  
     <script src="javascript/app.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
