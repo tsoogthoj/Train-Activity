@@ -6,5 +6,6 @@ https://tsoogthoj.github.io/Train-Activity/
 Technology used:
 - HTML
 - CSS
+- Bootstrap
 - Jquery
 - Moment.js
