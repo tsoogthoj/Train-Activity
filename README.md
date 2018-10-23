@@ -7,3 +7,4 @@ Technology used:
 - HTML
 - CSS
 - Jquery
+- Moment.js
